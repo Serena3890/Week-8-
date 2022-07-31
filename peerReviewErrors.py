@@ -1,8 +1,8 @@
 # This is a header for the application
 # You should read this header and insert your name and your date below as part of the peer review
 # This is a typical part of any program
-# Author: <author>
-# Creation Date: <date>
+# Author: Amber Conklin
+# Creation Date: 7/30/2022
 # Below is a simple program with 10 issues (some are syntax errors and some are logic errors.  You need to identify the issues and correct them.
 
 import random
@@ -15,15 +15,15 @@ def displayIntro():
 	is greedy and hungry, and will eat you on sight.''')
 	print()
 
-def chooseCave():
-    cave = ''
-	while cave != '1' and cave != '2':
-		print('Which cave will you go into? (1 or 2)')
-		cave = input()
+def chooseCave(): 
+    	 #cave is empty so loop will not run but loop is actually not needed
+	 # Invalid while and loop 
+	 # can be simplified and by putting this into cave = input()
+	cave = input('Which cave will you go into? (1 or 2)')
 
-	return caves
+	return cave # typo caves should be cave
 
-def checkCave(chosenCave):
+def checkCave(choseCave): # typo should be chooseCave
 	print('You approach the cave...')
 	#sleep for 2 seconds
 	time.sleep(2)
@@ -36,19 +36,19 @@ def checkCave(chosenCave):
 	time.sleep(2)
 	friendlyCave = random.randint(1, 2)
 
-	if chosenCave == str(friendlyCave):
+	if choseCave == str(friendlyCave): # typo should be chooseCave
 		print('Gives you his treasure!')
 	else:
-		print 'Gobbles you down in one bite!'
+		print ('Gobbles you down in one bite!')  #missing () making this a syntax error
 
 playAgain = 'yes'
-while playAgain = 'yes' or playAgain = 'y':
+while playAgain == 'yes' or playAgain == 'y': # Syntax error should use == for both conditions
 	displayIntro()
-	caveNumber = choosecave()
+	caveNumber = chooseCave() 	# typo should be chooseCave
 	checkCave(caveNumber)
     
-	print('Do you want to play again? (yes or no)')
-	playAgain = input()
-	if playAgain == "no":
-		print("Thanks for planing")
+	 # Can simplify and run smoother by puting this print into input function
+	playAgain = input('Do you want to play again? (yes or no)')
+	if playAgain == "no" or playAgain == 'n' 	# should add an or == 'n' to match previous options 
+		print("Thanks for playing")		# typo in the spelling of "playing"
 
